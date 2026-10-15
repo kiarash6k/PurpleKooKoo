@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:crypto_font_icons/crypto_font_icons.dart';
-import 'package:selection_menu/selection_menu.dart';
 
 List<DropdownMenuItem> crypto = [
 // DropdownMenuItem(
@@ -1060,6 +1058,7 @@ List<DropdownMenuItem> crypto = [
 //     value: "Option 88",
 //   ),
 DropdownMenuItem(
+    value: "Option 1",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/usdt.png"),
@@ -1070,12 +1069,12 @@ DropdownMenuItem(
         Text("USDT/Usdt"),
       ],
     ),
-    value: "Option 1",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 2",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/btc.png"),
@@ -1086,12 +1085,12 @@ DropdownMenuItem(
         Text("BTC/Usdt"),
       ],
     ),
-    value: "Option 2",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 3",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/eth.png"),
@@ -1102,12 +1101,12 @@ DropdownMenuItem(
         Text("ETH/Usdt"),
       ],
     ),
-    value: "Option 3",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 4",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/bnb.png"),
@@ -1118,12 +1117,12 @@ DropdownMenuItem(
         Text("BNB/Usdt"),
       ],
     ),
-    value: "Option 4",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 5",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/bcc.png"),
@@ -1134,12 +1133,12 @@ DropdownMenuItem(
         Text("BCC/Usdt"),
       ],
     ),
-    value: "Option 5",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 6",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/neo.png"),
@@ -1150,12 +1149,12 @@ DropdownMenuItem(
         Text("NEO/Usdt"),
       ],
     ),
-    value: "Option 6",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 7",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/ltc.png"),
@@ -1166,12 +1165,12 @@ DropdownMenuItem(
         Text("LTC/Usdt"),
       ],
     ),
-    value: "Option 7",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 8",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/qtum.png"),
@@ -1182,12 +1181,12 @@ DropdownMenuItem(
         Text("QTUM/Usdt"),
       ],
     ),
-    value: "Option 8",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 9",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/ada.png"),
@@ -1198,12 +1197,12 @@ DropdownMenuItem(
         Text("ADA/Usdt"),
       ],
     ),
-    value: "Option 9",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 10",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/xrp.png"),
@@ -1214,12 +1213,12 @@ DropdownMenuItem(
         Text("XRP/Usdt"),
       ],
     ),
-    value: "Option 10",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 11",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/eos.png"),
@@ -1230,12 +1229,12 @@ DropdownMenuItem(
         Text("EOS/Usdt"),
       ],
     ),
-    value: "Option 11",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 12",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/tusd.png"),
@@ -1246,12 +1245,12 @@ DropdownMenuItem(
         Text("TUSD/Usdt"),
       ],
     ),
-    value: "Option 12",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 13",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/xlm.png"),
@@ -1262,12 +1261,12 @@ DropdownMenuItem(
         Text("XLM/Usdt"),
       ],
     ),
-    value: "Option 13",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 14",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/ont.png"),
@@ -1278,12 +1277,12 @@ DropdownMenuItem(
         Text("ONT/Usdt"),
       ],
     ),
-    value: "Option 14",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 15",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/trx.png"),
@@ -1294,12 +1293,12 @@ DropdownMenuItem(
         Text("TRX/Usdt"),
       ],
     ),
-    value: "Option 15",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 16",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/etc.png"),
@@ -1310,12 +1309,12 @@ DropdownMenuItem(
         Text("ETC/Usdt"),
       ],
     ),
-    value: "Option 16",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 17",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/icx.png"),
@@ -1326,12 +1325,12 @@ DropdownMenuItem(
         Text("ICX/Usdt"),
       ],
     ),
-    value: "Option 17",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 18",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/nuls.png"),
@@ -1342,12 +1341,12 @@ DropdownMenuItem(
         Text("NULS/Usdt"),
       ],
     ),
-    value: "Option 18",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 19",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/vet.png"),
@@ -1358,12 +1357,12 @@ DropdownMenuItem(
         Text("VET/Usdt"),
       ],
     ),
-    value: "Option 19",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 20",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/pax.png"),
@@ -1374,12 +1373,12 @@ DropdownMenuItem(
         Text("PAX/Usdt"),
       ],
     ),
-    value: "Option 20",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 21",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/usdc.png"),
@@ -1390,12 +1389,12 @@ DropdownMenuItem(
         Text("USDC/Usdt"),
       ],
     ),
-    value: "Option 21",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 22",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/link.png"),
@@ -1406,12 +1405,12 @@ DropdownMenuItem(
         Text("LINK/Usdt"),
       ],
     ),
-    value: "Option 22",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 23",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/waves.png"),
@@ -1422,12 +1421,12 @@ DropdownMenuItem(
         Text("WAVES/Usdt"),
       ],
     ),
-    value: "Option 23",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 24",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/btt.png"),
@@ -1438,12 +1437,12 @@ DropdownMenuItem(
         Text("BTT/Usdt"),
       ],
     ),
-    value: "Option 24",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 25",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/ong.png"),
@@ -1454,12 +1453,12 @@ DropdownMenuItem(
         Text("ONG/Usdt"),
       ],
     ),
-    value: "Option 25",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 26",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/hot.png"),
@@ -1470,12 +1469,12 @@ DropdownMenuItem(
         Text("HOT/Usdt"),
       ],
     ),
-    value: "Option 26",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 27",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/zil.png"),
@@ -1486,12 +1485,12 @@ DropdownMenuItem(
         Text("ZIL/Usdt"),
       ],
     ),
-    value: "Option 27",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 28",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/zrx.png"),
@@ -1502,12 +1501,12 @@ DropdownMenuItem(
         Text("ZRX/Usdt"),
       ],
     ),
-    value: "Option 28",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 29",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/bat.png"),
@@ -1518,12 +1517,12 @@ DropdownMenuItem(
         Text("BAT/Usdt"),
       ],
     ),
-    value: "Option 29",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 30",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/xmr.png"),
@@ -1534,12 +1533,12 @@ DropdownMenuItem(
         Text("XMR/Usdt"),
       ],
     ),
-    value: "Option 30",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 31",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/zec.png"),
@@ -1550,12 +1549,12 @@ DropdownMenuItem(
         Text("ZEC/Usdt"),
       ],
     ),
-    value: "Option 31",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 32",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/iost.png"),
@@ -1566,12 +1565,12 @@ DropdownMenuItem(
         Text("IOST/Usdt"),
       ],
     ),
-    value: "Option 32",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 33",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/dash.png"),
@@ -1582,12 +1581,12 @@ DropdownMenuItem(
         Text("DASH/Usdt"),
       ],
     ),
-    value: "Option 33",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 34",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/nano.png"),
@@ -1598,12 +1597,12 @@ DropdownMenuItem(
         Text("NANO/Usdt"),
       ],
     ),
-    value: "Option 34",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 35",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/omg.png"),
@@ -1614,12 +1613,12 @@ DropdownMenuItem(
         Text("OMG/Usdt"),
       ],
     ),
-    value: "Option 35",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 36",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/theta.png"),
@@ -1630,12 +1629,12 @@ DropdownMenuItem(
         Text("THETA/Usdt"),
       ],
     ),
-    value: "Option 36",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 37",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/enj.png"),
@@ -1646,12 +1645,12 @@ DropdownMenuItem(
         Text("ENJ/Usdt"),
       ],
     ),
-    value: "Option 37",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 38",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/mith.png"),
@@ -1662,12 +1661,12 @@ DropdownMenuItem(
         Text("MITH/Usdt"),
       ],
     ),
-    value: "Option 38",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 39",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/matic.png"),
@@ -1678,12 +1677,12 @@ DropdownMenuItem(
         Text("MATIC/Usdt"),
       ],
     ),
-    value: "Option 39",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 40",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/atom.png"),
@@ -1694,12 +1693,12 @@ DropdownMenuItem(
         Text("ATOM/Usdt"),
       ],
     ),
-    value: "Option 40",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 41",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/one.png"),
@@ -1710,12 +1709,12 @@ DropdownMenuItem(
         Text("ONE/Usdt"),
       ],
     ),
-    value: "Option 41",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 42",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/algo.png"),
@@ -1726,12 +1725,12 @@ DropdownMenuItem(
         Text("ALGO/Usdt"),
       ],
     ),
-    value: "Option 42",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 43",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/gto.png"),
@@ -1742,12 +1741,12 @@ DropdownMenuItem(
         Text("GTO/Usdt"),
       ],
     ),
-    value: "Option 43",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 44",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/doge.png"),
@@ -1758,12 +1757,12 @@ DropdownMenuItem(
         Text("DOGE/Usdt"),
       ],
     ),
-    value: "Option 44",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 45",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/ankr.png"),
@@ -1774,12 +1773,12 @@ DropdownMenuItem(
         Text("ANKR/Usdt"),
       ],
     ),
-    value: "Option 45",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 46",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/npxs.png"),
@@ -1790,12 +1789,12 @@ DropdownMenuItem(
         Text("NPXS/Usdt"),
       ],
     ),
-    value: "Option 46",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 47",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/mtl.png"),
@@ -1806,12 +1805,12 @@ DropdownMenuItem(
         Text("MTL/Usdt"),
       ],
     ),
-    value: "Option 47",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 48",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/tomo.png"),
@@ -1822,12 +1821,12 @@ DropdownMenuItem(
         Text("TOMO/Usdt"),
       ],
     ),
-    value: "Option 48",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 49",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/dent.png"),
@@ -1838,12 +1837,12 @@ DropdownMenuItem(
         Text("DENT/Usdt"),
       ],
     ),
-    value: "Option 49",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 50",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/mft.png"),
@@ -1854,12 +1853,12 @@ DropdownMenuItem(
         Text("MFT/Usdt"),
       ],
     ),
-    value: "Option 50",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 51",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/storm.png"),
@@ -1870,12 +1869,12 @@ DropdownMenuItem(
         Text("STORM/Usdt"),
       ],
     ),
-    value: "Option 51",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 52",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/dock.png"),
@@ -1886,12 +1885,12 @@ DropdownMenuItem(
         Text("DOCK/Usdt"),
       ],
     ),
-    value: "Option 52",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 53",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/wan.png"),
@@ -1902,12 +1901,12 @@ DropdownMenuItem(
         Text("WAN/Usdt"),
       ],
     ),
-    value: "Option 53",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 54",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/fun.png"),
@@ -1918,12 +1917,12 @@ DropdownMenuItem(
         Text("FUN/Usdt"),
       ],
     ),
-    value: "Option 54",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 55",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/cvc.png"),
@@ -1934,12 +1933,12 @@ DropdownMenuItem(
         Text("CVC/Usdt"),
       ],
     ),
-    value: "Option 55",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 56",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/band.png"),
@@ -1950,12 +1949,12 @@ DropdownMenuItem(
         Text("BAND/Usdt"),
       ],
     ),
-    value: "Option 56",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 57",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/beam.png"),
@@ -1966,12 +1965,12 @@ DropdownMenuItem(
         Text("BEAM/Usdt"),
       ],
     ),
-    value: "Option 57",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 58",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/xtz.png"),
@@ -1982,12 +1981,12 @@ DropdownMenuItem(
         Text("XTZ/Usdt"),
       ],
     ),
-    value: "Option 58",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 59",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/ren.png"),
@@ -1998,12 +1997,12 @@ DropdownMenuItem(
         Text("REN/Usdt"),
       ],
     ),
-    value: "Option 59",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 60",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/rvn.png"),
@@ -2014,12 +2013,12 @@ DropdownMenuItem(
         Text("RVN/Usdt"),
       ],
     ),
-    value: "Option 60",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 61",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/nkn.png"),
@@ -2030,12 +2029,12 @@ DropdownMenuItem(
         Text("NKN/Usdt"),
       ],
     ),
-    value: "Option 61",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 62",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/stx.png"),
@@ -2046,12 +2045,12 @@ DropdownMenuItem(
         Text("STX/Usdt"),
       ],
     ),
-    value: "Option 62",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 63",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/iotx.png"),
@@ -2062,12 +2061,12 @@ DropdownMenuItem(
         Text("IOTX/Usdt"),
       ],
     ),
-    value: "Option 63",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 64",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/rlc.png"),
@@ -2078,12 +2077,12 @@ DropdownMenuItem(
         Text("RLC/Usdt"),
       ],
     ),
-    value: "Option 64",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 65",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/mco.png"),
@@ -2094,12 +2093,12 @@ DropdownMenuItem(
         Text("MCO/Usdt"),
       ],
     ),
-    value: "Option 65",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 66",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/ctxc.png"),
@@ -2110,12 +2109,12 @@ DropdownMenuItem(
         Text("CTXC/Usdt"),
       ],
     ),
-    value: "Option 66",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 67",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/bch.png"),
@@ -2126,12 +2125,12 @@ DropdownMenuItem(
         Text("BCH/Usdt"),
       ],
     ),
-    value: "Option 67",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 68",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/rub.png"),
@@ -2142,12 +2141,12 @@ DropdownMenuItem(
         Text("RUB/Usdt"),
       ],
     ),
-    value: "Option 68",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 69",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/eur.png"),
@@ -2158,12 +2157,12 @@ DropdownMenuItem(
         Text("EUR/Usdt"),
       ],
     ),
-    value: "Option 69",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 70",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/bts.png"),
@@ -2174,12 +2173,12 @@ DropdownMenuItem(
         Text("BTS/Usdt"),
       ],
     ),
-    value: "Option 70",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 71",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/lsk.png"),
@@ -2190,12 +2189,12 @@ DropdownMenuItem(
         Text("LSK/Usdt"),
       ],
     ),
-    value: "Option 71",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 72",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/bnt.png"),
@@ -2206,12 +2205,12 @@ DropdownMenuItem(
         Text("BNT/Usdt"),
       ],
     ),
-    value: "Option 72",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 73",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/strat.png"),
@@ -2222,12 +2221,12 @@ DropdownMenuItem(
         Text("STRAT/Usdt"),
       ],
     ),
-    value: "Option 73",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 74",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/aion.png"),
@@ -2238,12 +2237,12 @@ DropdownMenuItem(
         Text("AION/Usdt"),
       ],
     ),
-    value: "Option 74",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 75",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/wtc.png"),
@@ -2254,12 +2253,12 @@ DropdownMenuItem(
         Text("WTC/Usdt"),
       ],
     ),
-    value: "Option 75",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 76",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/data.png"),
@@ -2270,12 +2269,12 @@ DropdownMenuItem(
         Text("DATA/Usdt"),
       ],
     ),
-    value: "Option 76",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 77",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/xzc.png"),
@@ -2286,12 +2285,12 @@ DropdownMenuItem(
         Text("XZC/Usdt"),
       ],
     ),
-    value: "Option 77",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 78",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/sol.png"),
@@ -2302,28 +2301,12 @@ DropdownMenuItem(
         Text("SOL/Usdt"),
       ],
     ),
-    value: "Option 78",
   ), 
   
   
   
 DropdownMenuItem(
-    child: Row(
-      children: <Widget>[
-        Image.asset("assets/images/btc.png"),
-        
-        SizedBox(width: 30),
-        Text("BTC"),
-        SizedBox(width: 100),
-        Text("BTC/Usdt"),
-      ],
-    ),
     value: "Option 79",
-  ), 
-  
-  
-  
-DropdownMenuItem(
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/btc.png"),
@@ -2334,12 +2317,28 @@ DropdownMenuItem(
         Text("BTC/Usdt"),
       ],
     ),
-    value: "Option 80",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 80",
+    child: Row(
+      children: <Widget>[
+        Image.asset("assets/images/btc.png"),
+        
+        SizedBox(width: 30),
+        Text("BTC"),
+        SizedBox(width: 100),
+        Text("BTC/Usdt"),
+      ],
+    ),
+  ), 
+  
+  
+  
+DropdownMenuItem(
+    value: "Option 81",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/gxs.png"),
@@ -2350,12 +2349,12 @@ DropdownMenuItem(
         Text("GXS/Usdt"),
       ],
     ),
-    value: "Option 81",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 82",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/ardr.png"),
@@ -2366,12 +2365,12 @@ DropdownMenuItem(
         Text("ARDR/Usdt"),
       ],
     ),
-    value: "Option 82",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 83",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/lend.png"),
@@ -2382,12 +2381,12 @@ DropdownMenuItem(
         Text("LEND/Usdt"),
       ],
     ),
-    value: "Option 83",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 84",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/knc.png"),
@@ -2398,12 +2397,12 @@ DropdownMenuItem(
         Text("KNC/Usdt"),
       ],
     ),
-    value: "Option 84",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 85",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/rep.png"),
@@ -2414,12 +2413,12 @@ DropdownMenuItem(
         Text("REP/Usdt"),
       ],
     ),
-    value: "Option 85",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 86",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/lrc.png"),
@@ -2430,12 +2429,12 @@ DropdownMenuItem(
         Text("LRC/Usdt"),
       ],
     ),
-    value: "Option 86",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 87",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/comp.png"),
@@ -2446,12 +2445,12 @@ DropdownMenuItem(
         Text("COMP/Usdt"),
       ],
     ),
-    value: "Option 87",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 88",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/sc.png"),
@@ -2462,12 +2461,12 @@ DropdownMenuItem(
         Text("SC/Usdt"),
       ],
     ),
-    value: "Option 88",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 89",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/zen.png"),
@@ -2478,12 +2477,12 @@ DropdownMenuItem(
         Text("ZEN/Usdt"),
       ],
     ),
-    value: "Option 89",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 90",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/snx.png"),
@@ -2494,28 +2493,12 @@ DropdownMenuItem(
         Text("SNX/Usdt"),
       ],
     ),
-    value: "Option 90",
   ), 
   
   
   
 DropdownMenuItem(
-    child: Row(
-      children: <Widget>[
-        Image.asset("assets/images/eth.png"),
-        
-        SizedBox(width: 30),
-        Text("ETH"),
-        SizedBox(width: 100),
-        Text("ETH/Usdt"),
-      ],
-    ),
     value: "Option 91",
-  ), 
-  
-  
-  
-DropdownMenuItem(
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/eth.png"),
@@ -2526,28 +2509,28 @@ DropdownMenuItem(
         Text("ETH/Usdt"),
       ],
     ),
+  ), 
+  
+  
+  
+DropdownMenuItem(
     value: "Option 92",
+    child: Row(
+      children: <Widget>[
+        Image.asset("assets/images/eth.png"),
+        
+        SizedBox(width: 30),
+        Text("ETH"),
+        SizedBox(width: 100),
+        Text("ETH/Usdt"),
+      ],
+    ),
   ), 
   
   
   
 DropdownMenuItem(
-    child: Row(
-      children: <Widget>[
-        Image.asset("assets/images/ada.png"),
-        
-        SizedBox(width: 30),
-        Text("ADA"),
-        SizedBox(width: 100),
-        Text("ADA/Usdt"),
-      ],
-    ),
     value: "Option 93",
-  ), 
-  
-  
-  
-DropdownMenuItem(
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/ada.png"),
@@ -2558,28 +2541,28 @@ DropdownMenuItem(
         Text("ADA/Usdt"),
       ],
     ),
+  ), 
+  
+  
+  
+DropdownMenuItem(
     value: "Option 94",
+    child: Row(
+      children: <Widget>[
+        Image.asset("assets/images/ada.png"),
+        
+        SizedBox(width: 30),
+        Text("ADA"),
+        SizedBox(width: 100),
+        Text("ADA/Usdt"),
+      ],
+    ),
   ), 
   
   
   
 DropdownMenuItem(
-    child: Row(
-      children: <Widget>[
-        Image.asset("assets/images/link.png"),
-        
-        SizedBox(width: 30),
-        Text("LINK"),
-        SizedBox(width: 100),
-        Text("LINK/Usdt"),
-      ],
-    ),
     value: "Option 95",
-  ), 
-  
-  
-  
-DropdownMenuItem(
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/link.png"),
@@ -2590,12 +2573,28 @@ DropdownMenuItem(
         Text("LINK/Usdt"),
       ],
     ),
-    value: "Option 96",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 96",
+    child: Row(
+      children: <Widget>[
+        Image.asset("assets/images/link.png"),
+        
+        SizedBox(width: 30),
+        Text("LINK"),
+        SizedBox(width: 100),
+        Text("LINK/Usdt"),
+      ],
+    ),
+  ), 
+  
+  
+  
+DropdownMenuItem(
+    value: "Option 97",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/vtho.png"),
@@ -2606,12 +2605,12 @@ DropdownMenuItem(
         Text("VTHO/Usdt"),
       ],
     ),
-    value: "Option 97",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 98",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/dgb.png"),
@@ -2622,12 +2621,12 @@ DropdownMenuItem(
         Text("DGB/Usdt"),
       ],
     ),
-    value: "Option 98",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 99",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/gbp.png"),
@@ -2638,12 +2637,12 @@ DropdownMenuItem(
         Text("GBP/Usdt"),
       ],
     ),
-    value: "Option 99",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 100",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/mkr.png"),
@@ -2654,12 +2653,12 @@ DropdownMenuItem(
         Text("MKR/Usdt"),
       ],
     ),
-    value: "Option 100",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 101",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/dai.png"),
@@ -2670,12 +2669,12 @@ DropdownMenuItem(
         Text("DAI/Usdt"),
       ],
     ),
-    value: "Option 101",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 102",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/dcr.png"),
@@ -2686,12 +2685,12 @@ DropdownMenuItem(
         Text("DCR/Usdt"),
       ],
     ),
-    value: "Option 102",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 103",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/storj.png"),
@@ -2702,28 +2701,12 @@ DropdownMenuItem(
         Text("STORJ/Usdt"),
       ],
     ),
-    value: "Option 103",
   ), 
   
   
   
 DropdownMenuItem(
-    child: Row(
-      children: <Widget>[
-        Image.asset("assets/images/bnb.png"),
-        
-        SizedBox(width: 30),
-        Text("BNB"),
-        SizedBox(width: 100),
-        Text("BNB/Usdt"),
-      ],
-    ),
     value: "Option 104",
-  ), 
-  
-  
-  
-DropdownMenuItem(
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/bnb.png"),
@@ -2734,28 +2717,28 @@ DropdownMenuItem(
         Text("BNB/Usdt"),
       ],
     ),
+  ), 
+  
+  
+  
+DropdownMenuItem(
     value: "Option 105",
+    child: Row(
+      children: <Widget>[
+        Image.asset("assets/images/bnb.png"),
+        
+        SizedBox(width: 30),
+        Text("BNB"),
+        SizedBox(width: 100),
+        Text("BNB/Usdt"),
+      ],
+    ),
   ), 
   
   
   
 DropdownMenuItem(
-    child: Row(
-      children: <Widget>[
-        Image.asset("assets/images/xtz.png"),
-        
-        SizedBox(width: 30),
-        Text("XTZ"),
-        SizedBox(width: 100),
-        Text("XTZ/Usdt"),
-      ],
-    ),
     value: "Option 106",
-  ), 
-  
-  
-  
-DropdownMenuItem(
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/xtz.png"),
@@ -2766,12 +2749,28 @@ DropdownMenuItem(
         Text("XTZ/Usdt"),
       ],
     ),
-    value: "Option 107",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 107",
+    child: Row(
+      children: <Widget>[
+        Image.asset("assets/images/xtz.png"),
+        
+        SizedBox(width: 30),
+        Text("XTZ"),
+        SizedBox(width: 100),
+        Text("XTZ/Usdt"),
+      ],
+    ),
+  ), 
+  
+  
+  
+DropdownMenuItem(
+    value: "Option 108",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/mana.png"),
@@ -2782,12 +2781,12 @@ DropdownMenuItem(
         Text("MANA/Usdt"),
       ],
     ),
-    value: "Option 108",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 109",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/yfi.png"),
@@ -2798,12 +2797,12 @@ DropdownMenuItem(
         Text("YFI/Usdt"),
       ],
     ),
-    value: "Option 109",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 110",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/bal.png"),
@@ -2814,12 +2813,12 @@ DropdownMenuItem(
         Text("BAL/Usdt"),
       ],
     ),
-    value: "Option 110",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 111",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/blz.png"),
@@ -2830,12 +2829,12 @@ DropdownMenuItem(
         Text("BLZ/Usdt"),
       ],
     ),
-    value: "Option 111",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 112",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/kmd.png"),
@@ -2846,12 +2845,12 @@ DropdownMenuItem(
         Text("KMD/Usdt"),
       ],
     ),
-    value: "Option 112",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 113",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/dai.png"),
@@ -2862,12 +2861,12 @@ DropdownMenuItem(
         Text("DAI/Usdt"),
       ],
     ),
-    value: "Option 113",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 114",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/ant.png"),
@@ -2878,12 +2877,12 @@ DropdownMenuItem(
         Text("ANT/Usdt"),
       ],
     ),
-    value: "Option 114",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 115",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/crv.png"),
@@ -2894,12 +2893,12 @@ DropdownMenuItem(
         Text("CRV/Usdt"),
       ],
     ),
-    value: "Option 115",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 116",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/sand.png"),
@@ -2910,12 +2909,12 @@ DropdownMenuItem(
         Text("SAND/Usdt"),
       ],
     ),
-    value: "Option 116",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 117",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/nmr.png"),
@@ -2926,12 +2925,12 @@ DropdownMenuItem(
         Text("NMR/Usdt"),
       ],
     ),
-    value: "Option 117",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 118",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/dot.png"),
@@ -2942,12 +2941,12 @@ DropdownMenuItem(
         Text("DOT/Usdt"),
       ],
     ),
-    value: "Option 118",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 119",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/paxg.png"),
@@ -2958,12 +2957,12 @@ DropdownMenuItem(
         Text("PAXG/Usdt"),
       ],
     ),
-    value: "Option 119",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 120",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/sushi.png"),
@@ -2974,12 +2973,12 @@ DropdownMenuItem(
         Text("SUSHI/Usdt"),
       ],
     ),
-    value: "Option 120",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 121",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/ksm.png"),
@@ -2990,12 +2989,12 @@ DropdownMenuItem(
         Text("KSM/Usdt"),
       ],
     ),
-    value: "Option 121",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 122",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/uma.png"),
@@ -3006,28 +3005,12 @@ DropdownMenuItem(
         Text("UMA/Usdt"),
       ],
     ),
-    value: "Option 122",
   ), 
   
   
   
 DropdownMenuItem(
-    child: Row(
-      children: <Widget>[
-        Image.asset("assets/images/eos.png"),
-        
-        SizedBox(width: 30),
-        Text("EOS"),
-        SizedBox(width: 100),
-        Text("EOS/Usdt"),
-      ],
-    ),
     value: "Option 123",
-  ), 
-  
-  
-  
-DropdownMenuItem(
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/eos.png"),
@@ -3038,28 +3021,28 @@ DropdownMenuItem(
         Text("EOS/Usdt"),
       ],
     ),
+  ), 
+  
+  
+  
+DropdownMenuItem(
     value: "Option 124",
+    child: Row(
+      children: <Widget>[
+        Image.asset("assets/images/eos.png"),
+        
+        SizedBox(width: 30),
+        Text("EOS"),
+        SizedBox(width: 100),
+        Text("EOS/Usdt"),
+      ],
+    ),
   ), 
   
   
   
 DropdownMenuItem(
-    child: Row(
-      children: <Widget>[
-        Image.asset("assets/images/trx.png"),
-        
-        SizedBox(width: 30),
-        Text("TRX"),
-        SizedBox(width: 100),
-        Text("TRX/Usdt"),
-      ],
-    ),
     value: "Option 125",
-  ), 
-  
-  
-  
-DropdownMenuItem(
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/trx.png"),
@@ -3070,28 +3053,28 @@ DropdownMenuItem(
         Text("TRX/Usdt"),
       ],
     ),
+  ), 
+  
+  
+  
+DropdownMenuItem(
     value: "Option 126",
+    child: Row(
+      children: <Widget>[
+        Image.asset("assets/images/trx.png"),
+        
+        SizedBox(width: 30),
+        Text("TRX"),
+        SizedBox(width: 100),
+        Text("TRX/Usdt"),
+      ],
+    ),
   ), 
   
   
   
 DropdownMenuItem(
-    child: Row(
-      children: <Widget>[
-        Image.asset("assets/images/xrp.png"),
-        
-        SizedBox(width: 30),
-        Text("XRP"),
-        SizedBox(width: 100),
-        Text("XRP/Usdt"),
-      ],
-    ),
     value: "Option 127",
-  ), 
-  
-  
-  
-DropdownMenuItem(
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/xrp.png"),
@@ -3102,28 +3085,28 @@ DropdownMenuItem(
         Text("XRP/Usdt"),
       ],
     ),
+  ), 
+  
+  
+  
+DropdownMenuItem(
     value: "Option 128",
+    child: Row(
+      children: <Widget>[
+        Image.asset("assets/images/xrp.png"),
+        
+        SizedBox(width: 30),
+        Text("XRP"),
+        SizedBox(width: 100),
+        Text("XRP/Usdt"),
+      ],
+    ),
   ), 
   
   
   
 DropdownMenuItem(
-    child: Row(
-      children: <Widget>[
-        Image.asset("assets/images/dot.png"),
-        
-        SizedBox(width: 30),
-        Text("DOT"),
-        SizedBox(width: 100),
-        Text("DOT/Usdt"),
-      ],
-    ),
     value: "Option 129",
-  ), 
-  
-  
-  
-DropdownMenuItem(
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/dot.png"),
@@ -3134,28 +3117,28 @@ DropdownMenuItem(
         Text("DOT/Usdt"),
       ],
     ),
+  ), 
+  
+  
+  
+DropdownMenuItem(
     value: "Option 130",
+    child: Row(
+      children: <Widget>[
+        Image.asset("assets/images/dot.png"),
+        
+        SizedBox(width: 30),
+        Text("DOT"),
+        SizedBox(width: 100),
+        Text("DOT/Usdt"),
+      ],
+    ),
   ), 
   
   
   
 DropdownMenuItem(
-    child: Row(
-      children: <Widget>[
-        Image.asset("assets/images/ltc.png"),
-        
-        SizedBox(width: 30),
-        Text("LTC"),
-        SizedBox(width: 100),
-        Text("LTC/Usdt"),
-      ],
-    ),
     value: "Option 131",
-  ), 
-  
-  
-  
-DropdownMenuItem(
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/ltc.png"),
@@ -3166,12 +3149,28 @@ DropdownMenuItem(
         Text("LTC/Usdt"),
       ],
     ),
-    value: "Option 132",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 132",
+    child: Row(
+      children: <Widget>[
+        Image.asset("assets/images/ltc.png"),
+        
+        SizedBox(width: 30),
+        Text("LTC"),
+        SizedBox(width: 100),
+        Text("LTC/Usdt"),
+      ],
+    ),
+  ), 
+  
+  
+  
+DropdownMenuItem(
+    value: "Option 133",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/uni.png"),
@@ -3182,12 +3181,12 @@ DropdownMenuItem(
         Text("UNI/Usdt"),
       ],
     ),
-    value: "Option 133",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 134",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/oxt.png"),
@@ -3198,28 +3197,12 @@ DropdownMenuItem(
         Text("OXT/Usdt"),
       ],
     ),
-    value: "Option 134",
   ), 
   
   
   
 DropdownMenuItem(
-    child: Row(
-      children: <Widget>[
-        Image.asset("assets/images/uni.png"),
-        
-        SizedBox(width: 30),
-        Text("UNI"),
-        SizedBox(width: 100),
-        Text("UNI/Usdt"),
-      ],
-    ),
     value: "Option 135",
-  ), 
-  
-  
-  
-DropdownMenuItem(
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/uni.png"),
@@ -3230,12 +3213,28 @@ DropdownMenuItem(
         Text("UNI/Usdt"),
       ],
     ),
-    value: "Option 136",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 136",
+    child: Row(
+      children: <Widget>[
+        Image.asset("assets/images/uni.png"),
+        
+        SizedBox(width: 30),
+        Text("UNI"),
+        SizedBox(width: 100),
+        Text("UNI/Usdt"),
+      ],
+    ),
+  ), 
+  
+  
+  
+DropdownMenuItem(
+    value: "Option 137",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/utk.png"),
@@ -3246,12 +3245,12 @@ DropdownMenuItem(
         Text("UTK/Usdt"),
       ],
     ),
-    value: "Option 137",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 138",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/aave.png"),
@@ -3262,28 +3261,12 @@ DropdownMenuItem(
         Text("AAVE/Usdt"),
       ],
     ),
-    value: "Option 138",
   ), 
   
   
   
 DropdownMenuItem(
-    child: Row(
-      children: <Widget>[
-        Image.asset("assets/images/fil.png"),
-        
-        SizedBox(width: 30),
-        Text("FIL"),
-        SizedBox(width: 100),
-        Text("FIL/Usdt"),
-      ],
-    ),
     value: "Option 139",
-  ), 
-  
-  
-  
-DropdownMenuItem(
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/fil.png"),
@@ -3294,12 +3277,12 @@ DropdownMenuItem(
         Text("FIL/Usdt"),
       ],
     ),
+  ), 
+  
+  
+  
+DropdownMenuItem(
     value: "Option 140",
-  ), 
-  
-  
-  
-DropdownMenuItem(
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/fil.png"),
@@ -3310,28 +3293,28 @@ DropdownMenuItem(
         Text("FIL/Usdt"),
       ],
     ),
+  ), 
+  
+  
+  
+DropdownMenuItem(
     value: "Option 141",
+    child: Row(
+      children: <Widget>[
+        Image.asset("assets/images/fil.png"),
+        
+        SizedBox(width: 30),
+        Text("FIL"),
+        SizedBox(width: 100),
+        Text("FIL/Usdt"),
+      ],
+    ),
   ), 
   
   
   
 DropdownMenuItem(
-    child: Row(
-      children: <Widget>[
-        Image.asset("assets/images/yfi.png"),
-        
-        SizedBox(width: 30),
-        Text("YFI"),
-        SizedBox(width: 100),
-        Text("YFI/Usdt"),
-      ],
-    ),
     value: "Option 142",
-  ), 
-  
-  
-  
-DropdownMenuItem(
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/yfi.png"),
@@ -3342,28 +3325,28 @@ DropdownMenuItem(
         Text("YFI/Usdt"),
       ],
     ),
+  ), 
+  
+  
+  
+DropdownMenuItem(
     value: "Option 143",
+    child: Row(
+      children: <Widget>[
+        Image.asset("assets/images/yfi.png"),
+        
+        SizedBox(width: 30),
+        Text("YFI"),
+        SizedBox(width: 100),
+        Text("YFI/Usdt"),
+      ],
+    ),
   ), 
   
   
   
 DropdownMenuItem(
-    child: Row(
-      children: <Widget>[
-        Image.asset("assets/images/bch.png"),
-        
-        SizedBox(width: 30),
-        Text("BCH"),
-        SizedBox(width: 100),
-        Text("BCH/Usdt"),
-      ],
-    ),
     value: "Option 144",
-  ), 
-  
-  
-  
-DropdownMenuItem(
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/bch.png"),
@@ -3374,12 +3357,28 @@ DropdownMenuItem(
         Text("BCH/Usdt"),
       ],
     ),
-    value: "Option 145",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 145",
+    child: Row(
+      children: <Widget>[
+        Image.asset("assets/images/bch.png"),
+        
+        SizedBox(width: 30),
+        Text("BCH"),
+        SizedBox(width: 100),
+        Text("BCH/Usdt"),
+      ],
+    ),
+  ), 
+  
+  
+  
+DropdownMenuItem(
+    value: "Option 146",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/dnt.png"),
@@ -3390,12 +3389,12 @@ DropdownMenuItem(
         Text("DNT/Usdt"),
       ],
     ),
-    value: "Option 146",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 147",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/xem.png"),
@@ -3406,28 +3405,12 @@ DropdownMenuItem(
         Text("XEM/Usdt"),
       ],
     ),
-    value: "Option 147",
   ), 
   
   
   
 DropdownMenuItem(
-    child: Row(
-      children: <Widget>[
-        Image.asset("assets/images/aave.png"),
-        
-        SizedBox(width: 30),
-        Text("AAVE"),
-        SizedBox(width: 100),
-        Text("AAVE/Usdt"),
-      ],
-    ),
     value: "Option 148",
-  ), 
-  
-  
-  
-DropdownMenuItem(
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/aave.png"),
@@ -3438,12 +3421,28 @@ DropdownMenuItem(
         Text("AAVE/Usdt"),
       ],
     ),
-    value: "Option 149",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 149",
+    child: Row(
+      children: <Widget>[
+        Image.asset("assets/images/aave.png"),
+        
+        SizedBox(width: 30),
+        Text("AAVE"),
+        SizedBox(width: 100),
+        Text("AAVE/Usdt"),
+      ],
+    ),
+  ), 
+  
+  
+  
+DropdownMenuItem(
+    value: "Option 150",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/skl.png"),
@@ -3454,28 +3453,12 @@ DropdownMenuItem(
         Text("SKL/Usdt"),
       ],
     ),
-    value: "Option 150",
   ), 
   
   
   
 DropdownMenuItem(
-    child: Row(
-      children: <Widget>[
-        Image.asset("assets/images/sushi.png"),
-        
-        SizedBox(width: 30),
-        Text("SUSHI"),
-        SizedBox(width: 100),
-        Text("SUSHI/Usdt"),
-      ],
-    ),
     value: "Option 151",
-  ), 
-  
-  
-  
-DropdownMenuItem(
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/sushi.png"),
@@ -3486,28 +3469,28 @@ DropdownMenuItem(
         Text("SUSHI/Usdt"),
       ],
     ),
+  ), 
+  
+  
+  
+DropdownMenuItem(
     value: "Option 152",
+    child: Row(
+      children: <Widget>[
+        Image.asset("assets/images/sushi.png"),
+        
+        SizedBox(width: 30),
+        Text("SUSHI"),
+        SizedBox(width: 100),
+        Text("SUSHI/Usdt"),
+      ],
+    ),
   ), 
   
   
   
 DropdownMenuItem(
-    child: Row(
-      children: <Widget>[
-        Image.asset("assets/images/xlm.png"),
-        
-        SizedBox(width: 30),
-        Text("XLM"),
-        SizedBox(width: 100),
-        Text("XLM/Usdt"),
-      ],
-    ),
     value: "Option 153",
-  ), 
-  
-  
-  
-DropdownMenuItem(
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/xlm.png"),
@@ -3518,12 +3501,28 @@ DropdownMenuItem(
         Text("XLM/Usdt"),
       ],
     ),
-    value: "Option 154",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 154",
+    child: Row(
+      children: <Widget>[
+        Image.asset("assets/images/xlm.png"),
+        
+        SizedBox(width: 30),
+        Text("XLM"),
+        SizedBox(width: 100),
+        Text("XLM/Usdt"),
+      ],
+    ),
+  ), 
+  
+  
+  
+DropdownMenuItem(
+    value: "Option 155",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/grt.png"),
@@ -3534,12 +3533,12 @@ DropdownMenuItem(
         Text("GRT/Usdt"),
       ],
     ),
-    value: "Option 155",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 156",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/atm.png"),
@@ -3550,12 +3549,12 @@ DropdownMenuItem(
         Text("ATM/Usdt"),
       ],
     ),
-    value: "Option 156",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 157",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/auto.png"),
@@ -3566,12 +3565,12 @@ DropdownMenuItem(
         Text("AUTO/Usdt"),
       ],
     ),
-    value: "Option 157",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 158",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/btg.png"),
@@ -3582,12 +3581,12 @@ DropdownMenuItem(
         Text("BTG/Usdt"),
       ],
     ),
-    value: "Option 158",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 159",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/icp.png"),
@@ -3598,12 +3597,12 @@ DropdownMenuItem(
         Text("ICP/Usdt"),
       ],
     ),
-    value: "Option 159",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 160",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/lpt.png"),
@@ -3614,12 +3613,12 @@ DropdownMenuItem(
         Text("LPT/Usdt"),
       ],
     ),
-    value: "Option 160",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 161",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/xvg.png"),
@@ -3630,12 +3629,12 @@ DropdownMenuItem(
         Text("XVG/Usdt"),
       ],
     ),
-    value: "Option 161",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 162",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/mln.png"),
@@ -3646,12 +3645,12 @@ DropdownMenuItem(
         Text("MLN/Usdt"),
       ],
     ),
-    value: "Option 162",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 163",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/req.png"),
@@ -3662,12 +3661,12 @@ DropdownMenuItem(
         Text("REQ/Usdt"),
       ],
     ),
-    value: "Option 163",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 164",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/gno.png"),
@@ -3678,12 +3677,12 @@ DropdownMenuItem(
         Text("GNO/Usdt"),
       ],
     ),
-    value: "Option 164",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 165",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/elf.png"),
@@ -3694,12 +3693,12 @@ DropdownMenuItem(
         Text("ELF/Usdt"),
       ],
     ),
-    value: "Option 165",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 166",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/poly.png"),
@@ -3710,12 +3709,12 @@ DropdownMenuItem(
         Text("POLY/Usdt"),
       ],
     ),
-    value: "Option 166",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 167",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/sys.png"),
@@ -3726,12 +3725,12 @@ DropdownMenuItem(
         Text("SYS/Usdt"),
       ],
     ),
-    value: "Option 167",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 168",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/adx.png"),
@@ -3742,12 +3741,12 @@ DropdownMenuItem(
         Text("ADX/Usdt"),
       ],
     ),
-    value: "Option 168",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 169",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/powr.png"),
@@ -3758,12 +3757,12 @@ DropdownMenuItem(
         Text("POWR/Usdt"),
       ],
     ),
-    value: "Option 169",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 170",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/amp.png"),
@@ -3774,12 +3773,12 @@ DropdownMenuItem(
         Text("AMP/Usdt"),
       ],
     ),
-    value: "Option 170",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 171",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/flux.png"),
@@ -3790,12 +3789,12 @@ DropdownMenuItem(
         Text("FLUX/Usdt"),
       ],
     ),
-    value: "Option 171",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 172",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/steem.png"),
@@ -3806,12 +3805,12 @@ DropdownMenuItem(
         Text("STEEM/Usdt"),
       ],
     ),
-    value: "Option 172",
   ), 
   
   
   
 DropdownMenuItem(
+    value: "Option 173",
     child: Row(
       children: <Widget>[
         Image.asset("assets/images/nexo.png"),
@@ -3822,7 +3821,6 @@ DropdownMenuItem(
         Text("NEXO/Usdt"),
       ],
     ),
-    value: "Option 173",
   ), 
   
   

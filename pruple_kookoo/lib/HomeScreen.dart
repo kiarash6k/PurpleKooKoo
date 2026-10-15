@@ -1,4 +1,3 @@
-import 'package:crypto_font_icons/crypto_font_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 import 'package:http/http.dart' as http;
@@ -12,6 +11,9 @@ import 'Recomend.dart';
 class HomeScreeen extends StatefulWidget {
   final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
 
+  HomeScreeen({super.key});
+
+  @override
   State<HomeScreeen> createState() => _HomeScreeenState();
 }
 
@@ -28,7 +30,8 @@ class _HomeScreeenState extends State<HomeScreeen> {
     var height = MediaQuery.of(context).size.height;
     return Container(
       decoration: const BoxDecoration(
-          gradient: RadialGradient(radius: 1.1,
+          gradient: RadialGradient(
+              radius: 1.1,
               // begin: Alignment.topCenter,
               // end: Alignment.bottomCenter,
               colors: [
@@ -39,7 +42,8 @@ class _HomeScreeenState extends State<HomeScreeen> {
       child: MaterialApp(
         home: Scaffold(
           backgroundColor: Colors.transparent,
-          body: Column(children: [
+          body: SingleChildScrollView(
+              child: Column(children: [
             SizedBox(
               height: height / 40,
             ),
@@ -82,7 +86,7 @@ class _HomeScreeenState extends State<HomeScreeen> {
               height: height / 35,
             ),
             Container(
-                width: width,
+                width: width - 40,
                 margin: EdgeInsets.fromLTRB(20, 0, 20, 0),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -125,27 +129,32 @@ class _HomeScreeenState extends State<HomeScreeen> {
               height: height / 20,
             ),
             Container(
-                width: width,
+                width: width - 40,
                 margin: EdgeInsets.symmetric(horizontal: 20),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Row(
-                      children: [
-                        Text(
-                          "Favorite assets ",
-                          style: TextStyle(
-                              fontSize: 17,
-                              color: Color.fromARGB(255, 255, 255, 255),
-                              fontWeight: FontWeight.bold),
-                          textAlign: TextAlign.left,
-                        ),
-                        Icon(
-                          Icons.favorite_border_outlined,
-                          color: Color.fromARGB(89, 255, 255, 255),
-                          size: 17,
-                        ),
-                      ],
+                    Flexible(
+                      child: Row(
+                        children: [
+                          Flexible(
+                            child: Text(
+                              "Favorite assets ",
+                              style: TextStyle(
+                                  fontSize: 17,
+                                  color: Color.fromARGB(255, 255, 255, 255),
+                                  fontWeight: FontWeight.bold),
+                              textAlign: TextAlign.left,
+                              overflow: TextOverflow.ellipsis,
+                            ),
+                          ),
+                          Icon(
+                            Icons.favorite_border_outlined,
+                            color: Color.fromARGB(89, 255, 255, 255),
+                            size: 17,
+                          ),
+                        ],
+                      ),
                     ),
                     Text(
                       "Show All",
@@ -178,7 +187,7 @@ class _HomeScreeenState extends State<HomeScreeen> {
               height: MediaQuery.of(context).size.height / 30,
             ),
             Container(
-                width: MediaQuery.of(context).size.width,
+                width: MediaQuery.of(context).size.width - 40,
                 margin: EdgeInsets.fromLTRB(20, 0, 20, 0),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -227,7 +236,7 @@ class _HomeScreeenState extends State<HomeScreeen> {
               ),
               Recommended("BTC", "22000.0", "btc", "-0.03%", Colors.red),
             ]),
-          ]),
+          ])),
           floatingActionButton: SpeedDial(
             direction: SpeedDialDirection.down,
             buttonSize: Size(45, 45),
@@ -281,7 +290,6 @@ class _HomeScreeenState extends State<HomeScreeen> {
     );
   }
 
-
   List<Box> list = [
     Box("BTC", "19900", "btc", "-0.03%"),
     Box("ETC", "15.0", "etc", "-0.1%"),
@@ -299,7 +307,7 @@ class Currency {
   final String name;
   Currency({
     // this.price,
-    this.name,
+    required this.name,
   });
 }
 

@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:crypto_font_icons/crypto_font_icons.dart';
 import 'package:pruple_kookoo/HomeScreen.dart';
 import 'crypto.dart';
 
 class Long extends StatefulWidget {
+  const Long({super.key});
+
   @override
   State<Long> createState() => _LongState();
 }
@@ -78,7 +79,7 @@ class _LongState extends State<Long> {
               child: Container(
                 //User
                 decoration: BoxDecoration(
-                    color: Colors.white.withOpacity(1),
+                    color: Colors.white.withValues(alpha: 1),
                     borderRadius: BorderRadius.only(
                         topLeft: Radius.circular(60),
                         topRight: Radius.circular(60))),
@@ -120,14 +121,12 @@ class _LongState extends State<Long> {
                                 isExpanded: true,
                                 value: "Option 1",
                                 items: [
-                                  DropdownMenuItem(child:Text("Long",style: TextStyle(color: Colors.green),),
-                                      value: "Option 1"),
-                                  DropdownMenuItem(child:Text("Short",style: TextStyle(color: Colors.red)),
-                                      value: "Option 2"),
+                                  DropdownMenuItem(value: "Option 1", child:Text("Long",style: TextStyle(color: Colors.green),)),
+                                  DropdownMenuItem(value: "Option 2", child:Text("Short",style: TextStyle(color: Colors.red))),
                                 ],
                                 onChanged: (value) {
                                   setState(() {
-                                    longValue = value;
+                                    longValue = value!;
                                   });
                                 },
                               ),
@@ -141,10 +140,10 @@ class _LongState extends State<Long> {
                                     decoration: BoxDecoration(
                                         border: Border(
                                             top: BorderSide(
-                                                color: Colors.grey[200],
+                                                color: Colors.grey[200]!,
                                                 width: 1),
                                             bottom: BorderSide(
-                                                color: Colors.grey[200]))),
+                                                color: Colors.grey[200]!))),
                                     child: TextFormField(
                                       
                                       controller: buy,
@@ -155,7 +154,7 @@ class _LongState extends State<Long> {
                                           border: InputBorder.none),
                                       keyboardType: TextInputType.number,
                                       validator: (value) {
-                                        if (value.isEmpty) {
+                                        if (value == null || value.isEmpty) {
                                           return 'Please enter your Buy Price';
                                         }
                                         return null;
@@ -194,10 +193,10 @@ class _LongState extends State<Long> {
                                     decoration: BoxDecoration(
                                         border: Border(
                                             top: BorderSide(
-                                                color: Colors.grey[200],
+                                                color: Colors.grey[200]!,
                                                 width: 1),
                                             bottom: BorderSide(
-                                                color: Colors.grey[200]))),
+                                                color: Colors.grey[200]!))),
                                     child: TextFormField(
                                       
                                       controller: tp,
@@ -208,7 +207,7 @@ class _LongState extends State<Long> {
                                           border: InputBorder.none),
                                       keyboardType: TextInputType.number,
                                       validator: (value) {
-                                        if (value.isEmpty) {
+                                        if (value == null || value.isEmpty) {
                                           return 'Please enter your Tp';
                                         }
                                         return null;
@@ -221,10 +220,10 @@ class _LongState extends State<Long> {
                                     decoration: BoxDecoration(
                                         border: Border(
                                             top: BorderSide(
-                                                color: Colors.grey[200],
+                                                color: Colors.grey[200]!,
                                                 width: 1),
                                             bottom: BorderSide(
-                                                color: Colors.grey[200]))),
+                                                color: Colors.grey[200]!))),
                                     child: TextFormField(
                                       
                                       controller: sl,
@@ -235,7 +234,7 @@ class _LongState extends State<Long> {
                                           border: InputBorder.none),
                                       keyboardType: TextInputType.number,
                                       validator: (value) {
-                                        if (value.isEmpty) {
+                                        if (value == null || value.isEmpty) {
                                           return 'Please enter your Stop loss';
                                         }
                                         return null;
@@ -248,8 +247,7 @@ class _LongState extends State<Long> {
                         ElevatedButton(
                           style: ElevatedButton.styleFrom(
                               padding: EdgeInsets.symmetric(
-                                  horizontal: 75, vertical: 15),
-                              primary: Color.fromARGB(255, 24, 14, 86),
+                                  horizontal: 75, vertical: 15), backgroundColor: Color.fromARGB(255, 24, 14, 86),
                               elevation: 5,
                               shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(50))),
@@ -281,9 +279,9 @@ class _LongState extends State<Long> {
 }
 
 TextFormField target() {
-  final target_simple = TextEditingController();
-  TextFormField(
-    controller: target_simple,
+  final targetSimple = TextEditingController();
+  return TextFormField(
+    controller: targetSimple,
     decoration: InputDecoration(
         hintText: "Target Price",
         hintStyle: TextStyle(color: Colors.grey),

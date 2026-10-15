@@ -6,7 +6,8 @@ class Box extends StatelessWidget {
   String PS;
   String description;
   String image;
-  Box(this.title, this.description, this.image, this.PS);
+  Box(this.title, this.description, this.image, this.PS, {super.key});
+  @override
   Widget build(BuildContext context) {
     return 
       
@@ -17,6 +18,11 @@ class Box extends StatelessWidget {
                     left: MediaQuery.of(context).size.width * 0.03,),
                 width: MediaQuery.of(context).size.width / 1.9,
                 height: MediaQuery.of(context).size.height / 6,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(30),
+                  //color: Color.fromARGB(65, 255, 255, 255),
+                  color: Colors.white.withValues(alpha: 0.13),
+                ),
                 child: Column(
                   children: [
                     // SizedBox(
@@ -56,7 +62,7 @@ class Box extends StatelessWidget {
                               ),
                             ),
                             Text(
-                              title+"/Usdt",
+                              "$title/Usdt",
                               textAlign: TextAlign.center,
                               style: TextStyle(
                                 fontSize: MediaQuery.of(context).size.height / 65,
@@ -100,11 +106,6 @@ class Box extends StatelessWidget {
                       ],
                     ),
                   ],
-                ),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(30),
-                  //color: Color.fromARGB(65, 255, 255, 255),
-                  color: Colors.white.withOpacity(0.13),
                 ),
               
               

@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:crypto_font_icons/crypto_font_icons.dart';
 import 'package:pruple_kookoo/HomeScreen.dart';
 import 'crypto.dart';
 
 class Simple extends StatefulWidget {
+  const Simple({super.key});
+
   @override
   State<Simple> createState() => _SimpleState();
 }
@@ -72,7 +73,7 @@ class _SimpleState extends State<Simple> {
               child: Container(
                 //User
                 decoration: BoxDecoration(
-                    color: Colors.white.withOpacity(1),
+                    color: Colors.white.withValues(alpha: 1),
                     borderRadius: BorderRadius.only(
                         topLeft: Radius.circular(60),
                         topRight: Radius.circular(60))),
@@ -119,10 +120,10 @@ class _SimpleState extends State<Simple> {
                                     decoration: BoxDecoration(
                                         border: Border(
                                             top: BorderSide(
-                                                color: Colors.grey[200],
+                                                color: Colors.grey[200]!,
                                                 width: 1),
                                             bottom: BorderSide(
-                                                color: Colors.grey[200]))),
+                                                color: Colors.grey[200]!))),
                                     child: TextFormField(
                                       
                                       controller: target_simple,
@@ -133,7 +134,7 @@ class _SimpleState extends State<Simple> {
                                           border: InputBorder.none),
                                       keyboardType: TextInputType.number,
                                       validator: (value) {
-                                        if (value.isEmpty) {
+                                        if (value == null || value.isEmpty) {
                                           return 'Please enter your Target Price';
                                         }
                                         return null;
@@ -173,8 +174,7 @@ class _SimpleState extends State<Simple> {
                         ElevatedButton(
                           style: ElevatedButton.styleFrom(
                               padding: EdgeInsets.symmetric(
-                                  horizontal: 75, vertical: 15),
-                              primary: Color.fromARGB(255, 24, 14, 86),
+                                  horizontal: 75, vertical: 15), backgroundColor: Color.fromARGB(255, 24, 14, 86),
                               elevation: 5,
                               shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(50))),
@@ -206,9 +206,9 @@ class _SimpleState extends State<Simple> {
 }
 
 TextFormField target() {
-  final target_simple = TextEditingController();
-  TextFormField(
-    controller: target_simple,
+  final targetSimple = TextEditingController();
+  return TextFormField(
+    controller: targetSimple,
     decoration: InputDecoration(
         hintText: "Target Price",
         hintStyle: TextStyle(color: Colors.grey),

@@ -7,7 +7,8 @@ class Recommended extends StatelessWidget {
   String description;
   String image;
   Color color;
-  Recommended(this.title, this.description, this.image, this.PS, this.color);
+  Recommended(this.title, this.description, this.image, this.PS, this.color, {super.key});
+  @override
   Widget build(BuildContext context) {
     return Container(
       alignment: Alignment.topLeft,
@@ -16,6 +17,10 @@ class Recommended extends StatelessWidget {
       ),
       width: MediaQuery.of(context).size.width,
       height: MediaQuery.of(context).size.height / 14,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(16),
+        color: Colors.white.withValues(alpha: 0.15),
+      ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -64,7 +69,7 @@ class Recommended extends StatelessWidget {
                   Container(
                     alignment: Alignment.center,
                     child: Text(
-                      title + "/Usdt",
+                      "$title/Usdt",
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         fontSize: MediaQuery.of(context).size.height / 65,
@@ -122,10 +127,6 @@ class Recommended extends StatelessWidget {
           ),
           
         ],
-      ),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(16),
-        color: Colors.white.withOpacity(0.15),
       ),
     );
   }
