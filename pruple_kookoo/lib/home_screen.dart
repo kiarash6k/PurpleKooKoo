@@ -8,16 +8,16 @@ import 'login.dart';
 import 'long.dart';
 import 'recommend.dart';
 
-class HomeScreeen extends StatefulWidget {
+class HomeScreen extends StatefulWidget {
   final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
 
-  HomeScreeen({super.key});
+  HomeScreen({super.key});
 
   @override
-  State<HomeScreeen> createState() => _HomeScreeenState();
+  State<HomeScreen> createState() => _HomeScreenState();
 }
 
-class _HomeScreeenState extends State<HomeScreeen> {
+class _HomeScreenState extends State<HomeScreen> {
   @override
   void initState() {
     super.initState();
@@ -25,7 +25,6 @@ class _HomeScreeenState extends State<HomeScreeen> {
 
   @override
   Widget build(BuildContext context) {
-    var size = MediaQuery.of(context).size;
     var width = MediaQuery.of(context).size.width;
     var height = MediaQuery.of(context).size.height;
     return Container(
@@ -178,7 +177,8 @@ class _HomeScreeenState extends State<HomeScreeen> {
                 ),
                 scrollDirection: Axis.horizontal,
                 itemBuilder: (context, index) {
-                  return BoxBuilder(list[index]);
+                  return Box(list[index].title, list[index].description,
+                      list[index].image, list[index].change);
                 },
                 itemCount: 4,
               ),
@@ -297,9 +297,6 @@ class _HomeScreeenState extends State<HomeScreeen> {
     Box("LTC", "452.0", "ltc", "-2.52%"),
   ];
 
-  Widget BoxBuilder(Box list) {
-    return Box(list.title, list.description, list.image, list.PS);
-  }
 }
 
 class Currency {
@@ -311,18 +308,21 @@ class Currency {
   });
 }
 
-Future getRequest(String name) async {
-  //replace your restFull API here.
-  String url = "https://jsonplaceholder.typicode.com/posts";
-  final response =
-      await http.get(Uri.parse("https://api.kucoin.com/api/v1/prices"));
-
-  var responseData = json.decode(response.body);
-
-  //Creating a list to store input data;
-  Currency currency = Currency(
-    name: responseData["data"][name],
-  );
-
-  return currency.name;
+/// Fetches the latest KuCoin price for [name] (e.g. "BTC").
+///
+/// Returns null when the request fails or the symbol is unknown, so callers
+/// can show an error state instead of crashing.
+Future<String?> getRequest(String name) async {
+  try {
+    final response = await http
+        .get(Uri.parse("https://api.kucoin.com/api/v1/prices"))
+        .timeout(const Duration(seconds: 10));
+    if (response.statusCode != 200) return null;
+    final data = json.decode(response.body)["data"];
+    final price = data is Map ? data[name] : null;
+    return price?.toString();
+  } catch (_) {
+    // Network error, timeout, or a CORS block on web.
+    return null;
+  }
 }

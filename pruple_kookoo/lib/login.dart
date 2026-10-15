@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pruple_kookoo/home_screen.dart';
+import 'package:purple_kookoo/home_screen.dart';
 import 'crypto.dart';
 
 class Simple extends StatefulWidget {
@@ -10,11 +10,11 @@ class Simple extends StatefulWidget {
 }
 
 class _SimpleState extends State<Simple> {
-  String dropdownValue = 'Option 1';
-  final target_simple = TextEditingController();
+  String dropdownValue = 'USDT';
+  final targetSimple = TextEditingController();
   @override
   void dispose() {
-    target_simple.dispose();
+    targetSimple.dispose();
     super.dispose();
   }
 
@@ -103,7 +103,7 @@ class _SimpleState extends State<Simple> {
                                 items: crypto,
                                 onChanged: (value) {
                                   setState(() {
-                                    dropdownValue = value;
+                                    dropdownValue = value!;
                                   });
                                 },
                               ),
@@ -126,7 +126,7 @@ class _SimpleState extends State<Simple> {
                                                 color: Colors.grey[200]!))),
                                     child: TextFormField(
                                       
-                                      controller: target_simple,
+                                      controller: targetSimple,
                                       decoration: InputDecoration(
                                           hintText: "Target Price",
                                           hintStyle:
@@ -147,7 +147,7 @@ class _SimpleState extends State<Simple> {
                                   TextButton(
                                     onPressed: () {
                                       var current = 1234;
-                                      target_simple.text = current.toString();
+                                      targetSimple.text = current.toString();
                                     },
                                     child: Text(
                                       "Current Price",
@@ -179,11 +179,11 @@ class _SimpleState extends State<Simple> {
                               shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(50))),
                           onPressed: () {
-                            target_simple.text.isNotEmpty ?
+                            targetSimple.text.isNotEmpty ?
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => HomeScreeen())) : null;
+                                    builder: (context) => HomeScreen())) : null;
                           },
                           child: Text(
                             "Add Alarm",
@@ -203,16 +203,4 @@ class _SimpleState extends State<Simple> {
       ),
     );
   }
-}
-
-TextFormField target() {
-  final targetSimple = TextEditingController();
-  return TextFormField(
-    controller: targetSimple,
-    decoration: InputDecoration(
-        hintText: "Target Price",
-        hintStyle: TextStyle(color: Colors.grey),
-        border: InputBorder.none),
-    keyboardType: TextInputType.number,
-  );
 }

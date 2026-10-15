@@ -1,4 +1,4 @@
-package com.example.pruple_kookoo
+package com.kiarash.purplekookoo
 
 import io.flutter.embedding.android.FlutterActivity
 

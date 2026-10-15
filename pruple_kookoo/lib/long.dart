@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pruple_kookoo/home_screen.dart';
+import 'package:purple_kookoo/home_screen.dart';
 import 'crypto.dart';
 
 class Long extends StatefulWidget {
@@ -10,7 +10,7 @@ class Long extends StatefulWidget {
 }
 
 class _LongState extends State<Long> {
-  String dropdownValue = 'Option 1';
+  String dropdownValue = 'USDT';
   String longValue = 'Option 1';
 
   final tp = TextEditingController();
@@ -109,7 +109,7 @@ class _LongState extends State<Long> {
                                 items: crypto,
                                 onChanged: (value) {
                                   setState(() {
-                                    dropdownValue = value;
+                                    dropdownValue = value!;
                                   });
                                 },
                               ),
@@ -256,7 +256,7 @@ class _LongState extends State<Long> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => HomeScreeen())) : null;
+                                    builder: (context) => HomeScreen())) : null;
                           },
                           child: Text(
                             "Add Alarm",
@@ -276,16 +276,4 @@ class _LongState extends State<Long> {
       ),
     );
   }
-}
-
-TextFormField target() {
-  final targetSimple = TextEditingController();
-  return TextFormField(
-    controller: targetSimple,
-    decoration: InputDecoration(
-        hintText: "Target Price",
-        hintStyle: TextStyle(color: Colors.grey),
-        border: InputBorder.none),
-    keyboardType: TextInputType.number,
-  );
 }

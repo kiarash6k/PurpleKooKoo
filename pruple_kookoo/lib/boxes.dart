@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
 class Box extends StatelessWidget {
-  @override
-  String title;
-  String PS;
-  String description;
-  String image;
-  Box(this.title, this.description, this.image, this.PS, {super.key});
+  final String title;
+  final String change;
+  final String description;
+  final String image;
+  const Box(this.title, this.description, this.image, this.change,
+      {super.key});
   @override
   Widget build(BuildContext context) {
     return 
@@ -94,7 +94,7 @@ class Box extends StatelessWidget {
                         ),
                         SizedBox(width: MediaQuery.of(context).size.width / 15),
                         Text(
-                          PS,
+                          change,
                           textAlign: TextAlign.center,
                           style: TextStyle(
                             fontSize: MediaQuery.of(context).size.height / 60,

@@ -1,16 +1,33 @@
-# pruple_kookoo
+# Purple KooKoo
 
-A new Flutter project.
+Crypto price alarm dashboard built with Flutter (Android, iOS, web).
 
-## Getting Started
+## Run
 
-This project is a starting point for a Flutter application.
+```bash
+flutter pub get
+flutter run -d chrome   # or an Android/iOS device or simulator
+```
 
-A few resources to get you started if this is your first Flutter project:
+## Release signing (Android)
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+Create a keystore, then add `android/key.properties` (git-ignored):
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```properties
+storeFile=/absolute/path/to/upload-keystore.jks
+storePassword=...
+keyAlias=upload
+keyPassword=...
+```
+
+Without it, release builds fall back to the debug key.
+
+## Notes
+
+- Prices come from the KuCoin public API. On web the browser may block it
+  (CORS); the app then gets `null` from `getRequest` and shows no price.
+- App ID / bundle ID: `com.kiarash.purplekookoo`. Change it in
+  `android/app/build.gradle.kts` and the Xcode project before publishing under
+  your own name.
+- Regenerate launcher icons after changing `assets/images/kookoo.png`:
+  `dart run flutter_launcher_icons`.

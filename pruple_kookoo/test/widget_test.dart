@@ -1,7 +1,7 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:pruple_kookoo/main.dart';
+import 'package:purple_kookoo/main.dart';
 
 void main() {
   testWidgets('App builds', (WidgetTester tester) async {

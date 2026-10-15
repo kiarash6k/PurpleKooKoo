@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 
 class Recommended extends StatelessWidget {
-  @override
-  String title;
-  String PS;
-  String description;
-  String image;
-  Color color;
-  Recommended(this.title, this.description, this.image, this.PS, this.color, {super.key});
+  final String title;
+  final String change;
+  final String description;
+  final String image;
+  final Color color;
+  const Recommended(
+      this.title, this.description, this.image, this.change, this.color,
+      {super.key});
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -110,7 +111,7 @@ class Recommended extends StatelessWidget {
                   
                   
                   Text(
-                    PS,
+                    change,
                     textAlign: TextAlign.start,
                     style: TextStyle(
                       fontSize: MediaQuery.of(context).size.height / 60,
