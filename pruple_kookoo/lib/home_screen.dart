@@ -3,10 +3,10 @@ import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 import 'package:http/http.dart' as http;
 
 import 'dart:convert';
-import 'Boxes.dart';
-import 'Login.dart';
-import 'Long.dart';
-import 'Recomend.dart';
+import 'boxes.dart';
+import 'login.dart';
+import 'long.dart';
+import 'recommend.dart';
 
 class HomeScreeen extends StatefulWidget {
   final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();

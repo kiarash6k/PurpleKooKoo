@@ -1,22 +1,29 @@
 import 'package:flutter/material.dart';
-import 'package:pruple_kookoo/HomeScreen.dart';
+import 'package:pruple_kookoo/home_screen.dart';
 import 'crypto.dart';
 
-class Simple extends StatefulWidget {
-  const Simple({super.key});
+class Long extends StatefulWidget {
+  const Long({super.key});
 
   @override
-  State<Simple> createState() => _SimpleState();
+  State<Long> createState() => _LongState();
 }
 
-class _SimpleState extends State<Simple> {
+class _LongState extends State<Long> {
   String dropdownValue = 'Option 1';
-  final target_simple = TextEditingController();
+  String longValue = 'Option 1';
+
+  final tp = TextEditingController();
+  final sl = TextEditingController();
+  final buy = TextEditingController();
   @override
   void dispose() {
-    target_simple.dispose();
+    tp.dispose();
+    sl.dispose();
+    buy.dispose();
     super.dispose();
   }
+  
 
   @override
   Widget build(BuildContext context) {
@@ -25,9 +32,6 @@ class _SimpleState extends State<Simple> {
         width: double.infinity,
         decoration: BoxDecoration(
             gradient: LinearGradient(begin: Alignment.topCenter, colors: [
-          // Colors.orange[900],
-          // Colors.orange[800],
-          // Colors.orange[400]
           Color.fromARGB(255, 24, 14, 86),
           Color.fromARGB(255, 54, 0, 90)
         ])),
@@ -50,9 +54,11 @@ class _SimpleState extends State<Simple> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   Image.asset(
-                    "assets/images/alarm1.png",
-                    height: 100,
-                    width: 100,
+                    longValue == 'Option 1'
+                        ? "assets/images/bull.png"
+                        : "assets/images/bear.png",
+                      scale:4.5,
+
                   ),
                   Text("Set Alarm",
                       style: TextStyle(color: Colors.white, fontSize: 40)),
@@ -110,6 +116,20 @@ class _SimpleState extends State<Simple> {
                               SizedBox(
                                 height: 10,
                               ),
+                              DropdownButton(
+                                
+                                isExpanded: true,
+                                value: "Option 1",
+                                items: [
+                                  DropdownMenuItem(value: "Option 1", child:Text("Long",style: TextStyle(color: Colors.green),)),
+                                  DropdownMenuItem(value: "Option 2", child:Text("Short",style: TextStyle(color: Colors.red))),
+                                ],
+                                onChanged: (value) {
+                                  setState(() {
+                                    longValue = value!;
+                                  });
+                                },
+                              ),
                               Row(
                                 children: [
                                   Container(
@@ -126,16 +146,16 @@ class _SimpleState extends State<Simple> {
                                                 color: Colors.grey[200]!))),
                                     child: TextFormField(
                                       
-                                      controller: target_simple,
+                                      controller: buy,
                                       decoration: InputDecoration(
-                                          hintText: "Target Price",
+                                          hintText: "Buy Price",
                                           hintStyle:
                                               TextStyle(color: Colors.grey),
                                           border: InputBorder.none),
                                       keyboardType: TextInputType.number,
                                       validator: (value) {
                                         if (value == null || value.isEmpty) {
-                                          return 'Please enter your Target Price';
+                                          return 'Please enter your Buy Price';
                                         }
                                         return null;
                                       },
@@ -147,7 +167,7 @@ class _SimpleState extends State<Simple> {
                                   TextButton(
                                     onPressed: () {
                                       var current = 1234;
-                                      target_simple.text = current.toString();
+                                      buy.text = current.toString();
                                     },
                                     child: Text(
                                       "Current Price",
@@ -168,8 +188,61 @@ class _SimpleState extends State<Simple> {
                             ],
                           ),
                         ),
+                        Container(
+                                    padding: EdgeInsets.all(10),
+                                    decoration: BoxDecoration(
+                                        border: Border(
+                                            top: BorderSide(
+                                                color: Colors.grey[200]!,
+                                                width: 1),
+                                            bottom: BorderSide(
+                                                color: Colors.grey[200]!))),
+                                    child: TextFormField(
+                                      
+                                      controller: tp,
+                                      decoration: InputDecoration(
+                                          hintText: "Tp",
+                                          hintStyle:
+                                              TextStyle(color: Colors.grey),
+                                          border: InputBorder.none),
+                                      keyboardType: TextInputType.number,
+                                      validator: (value) {
+                                        if (value == null || value.isEmpty) {
+                                          return 'Please enter your Tp';
+                                        }
+                                        return null;
+                                      },
+                                    ),
+                                  ),
+                                  Container(
+
+                                    padding: EdgeInsets.all(10),
+                                    decoration: BoxDecoration(
+                                        border: Border(
+                                            top: BorderSide(
+                                                color: Colors.grey[200]!,
+                                                width: 1),
+                                            bottom: BorderSide(
+                                                color: Colors.grey[200]!))),
+                                    child: TextFormField(
+                                      
+                                      controller: sl,
+                                      decoration: InputDecoration(
+                                          hintText: "SL",
+                                          hintStyle:
+                                              TextStyle(color: Colors.grey),
+                                          border: InputBorder.none),
+                                      keyboardType: TextInputType.number,
+                                      validator: (value) {
+                                        if (value == null || value.isEmpty) {
+                                          return 'Please enter your Stop loss';
+                                        }
+                                        return null;
+                                      },
+                                    ),
+                                  ),
                         SizedBox(
-                          height: 70,
+                          height: 50,
                         ),
                         ElevatedButton(
                           style: ElevatedButton.styleFrom(
@@ -179,7 +252,7 @@ class _SimpleState extends State<Simple> {
                               shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(50))),
                           onPressed: () {
-                            target_simple.text.isNotEmpty ?
+                            buy.text.isNotEmpty ?
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
