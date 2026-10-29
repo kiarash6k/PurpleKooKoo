@@ -13,11 +13,11 @@
 </p>
 
 <p align="center">
-  <img src="pruple_kookoo/docs/screenshots/dashboard.png" width="19%" alt="Dashboard">
-  <img src="pruple_kookoo/docs/screenshots/markets.png" width="19%" alt="Markets">
-  <img src="pruple_kookoo/docs/screenshots/alarms.png" width="19%" alt="Alarms">
-  <img src="pruple_kookoo/docs/screenshots/new_alarm.png" width="19%" alt="New alarm">
-  <img src="pruple_kookoo/docs/screenshots/settings.png" width="19%" alt="Settings">
+  <img src="docs/screenshots/dashboard.png" width="19%" alt="Dashboard">
+  <img src="docs/screenshots/markets.png" width="19%" alt="Markets">
+  <img src="docs/screenshots/alarms.png" width="19%" alt="Alarms">
+  <img src="docs/screenshots/new_alarm.png" width="19%" alt="New alarm">
+  <img src="docs/screenshots/settings.png" width="19%" alt="Settings">
 </p>
 
 ## Features
@@ -36,7 +36,6 @@ Also: responsive layout capped for tablets and web, safe-area aware, semantic la
 ## Getting started
 
 ```bash
-cd pruple_kookoo
 flutter pub get
 flutter run                 # pick a device, or: flutter run -d chrome
 ```
@@ -53,22 +52,63 @@ flutter build web
 
 ## Architecture
 
-```
-lib/
-├── main.dart               app entry, lifecycle (pauses polling in background)
-├── app_services.dart       wires controllers together; InheritedWidget scope
-├── core/                   theme, formatting helpers, coin icon registry
-├── data/                   Ticker + Alarm models, KuCoin MarketRepository
-├── state/                  MarketController, AlarmController, SettingsController
-├── services/               AlarmNotifier (flutter_local_notifications)
-├── screens/                dashboard, markets, alarms, alarm form, settings
-└── widgets/                shared UI (glass card, coin icon, change chip…)
+A small, layered design with no state-management dependency. UI depends on controllers, controllers depend on data and services, and nothing flows the other way.
+
+```mermaid
+flowchart TD
+    subgraph UI["screens / widgets"]
+        Shell[AppShell<br/>bottom navigation]
+        Shell --> Dash[Dashboard]
+        Shell --> Mk[Markets]
+        Shell --> Al[Alarms]
+        Shell --> St[Settings]
+        Form[Alarm form]
+    end
+
+    subgraph State["state - ChangeNotifier controllers"]
+        MC[MarketController<br/>prices, favorites]
+        AC[AlarmController<br/>alarms, evaluation]
+        SC[SettingsController<br/>theme, notifications]
+    end
+
+    subgraph Data["data / services"]
+        Repo[MarketRepository<br/>KuCoin API]
+        Prefs[(shared_preferences)]
+        Notif[AlarmNotifier<br/>local notifications]
+    end
+
+    UI -->|ListenableBuilder| State
+    MC --> Repo
+    MC --> Prefs
+    AC --> Prefs
+    SC --> Prefs
+    MC -- "onData(prices)" --> AC
+    AC -- "alarm fired" --> Notif
 ```
 
-- **State** uses plain `ChangeNotifier` + `ListenableBuilder`. No state-management dependency.
-- **Data flow:** `MarketController.refresh()` → `onData` → `AlarmController.evaluate()` → notification + in-app banner.
-- **Testability:** the HTTP client, repository, notifier and `SharedPreferences` are all injectable; tests use fakes and `MockClient`.
-- **Persistence:** alarms, favorites and settings via `shared_preferences`, tolerant of corrupt data.
+**Alarm flow:** every 30 s `MarketController` fetches prices, hands them to `AlarmController`, which marks crossed alarms as triggered. `AppServices` then sends a system notification and emits an in-app banner event.
+
+```
+.
+├── lib/
+│   ├── main.dart                 entry point, app lifecycle (pauses polling in background)
+│   ├── app_services.dart         composition root and AppScope (InheritedWidget)
+│   ├── core/                     theme, formatting helpers, coin icon registry
+│   ├── data/                     models (Ticker, Alarm) and MarketRepository
+│   ├── state/                    MarketController, AlarmController, SettingsController
+│   ├── services/                 AlarmNotifier (flutter_local_notifications)
+│   ├── screens/                  dashboard, markets, alarms, alarm form, settings
+│   └── widgets/                  shared UI: glass card, coin icon, change chip, banners
+├── test/                         unit and widget tests (fakes in helpers.dart)
+├── assets/images/                coin and UI images
+├── docs/screenshots/             images used in this README
+├── android/  ios/  web/          platform projects
+└── pubspec.yaml
+```
+
+- **Dependency injection:** `AppServices` is built once in `main()`. The HTTP client, repository, notifier and `SharedPreferences` are injectable, so tests run against fakes and `MockClient`.
+- **Persistence:** alarms, favorites and settings use `shared_preferences` and tolerate corrupt data.
+- **Error handling:** repository failures become a user-facing message; the last known prices stay on screen.
 
 ## Disclaimer
 
