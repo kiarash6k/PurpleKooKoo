@@ -1,28 +1,22 @@
 import 'package:flutter/material.dart';
-import 'package:crypto_font_icons/crypto_font_icons.dart';
-import 'package:pruple_kookoo/HomeScreen.dart';
+import 'package:purple_kookoo/home_screen.dart';
 import 'crypto.dart';
 
-class Long extends StatefulWidget {
+class Simple extends StatefulWidget {
+  const Simple({super.key});
+
   @override
-  State<Long> createState() => _LongState();
+  State<Simple> createState() => _SimpleState();
 }
 
-class _LongState extends State<Long> {
-  String dropdownValue = 'Option 1';
-  String longValue = 'Option 1';
-
-  final tp = TextEditingController();
-  final sl = TextEditingController();
-  final buy = TextEditingController();
+class _SimpleState extends State<Simple> {
+  String dropdownValue = 'USDT';
+  final targetSimple = TextEditingController();
   @override
   void dispose() {
-    tp.dispose();
-    sl.dispose();
-    buy.dispose();
+    targetSimple.dispose();
     super.dispose();
   }
-  
 
   @override
   Widget build(BuildContext context) {
@@ -31,6 +25,9 @@ class _LongState extends State<Long> {
         width: double.infinity,
         decoration: BoxDecoration(
             gradient: LinearGradient(begin: Alignment.topCenter, colors: [
+          // Colors.orange[900],
+          // Colors.orange[800],
+          // Colors.orange[400]
           Color.fromARGB(255, 24, 14, 86),
           Color.fromARGB(255, 54, 0, 90)
         ])),
@@ -53,11 +50,9 @@ class _LongState extends State<Long> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   Image.asset(
-                    longValue == 'Option 1'
-                        ? "assets/images/bull.png"
-                        : "assets/images/bear.png",
-                      scale:4.5,
-
+                    "assets/images/alarm1.png",
+                    height: 100,
+                    width: 100,
                   ),
                   Text("Set Alarm",
                       style: TextStyle(color: Colors.white, fontSize: 40)),
@@ -78,7 +73,7 @@ class _LongState extends State<Long> {
               child: Container(
                 //User
                 decoration: BoxDecoration(
-                    color: Colors.white.withOpacity(1),
+                    color: Colors.white.withValues(alpha: 1),
                     borderRadius: BorderRadius.only(
                         topLeft: Radius.circular(60),
                         topRight: Radius.circular(60))),
@@ -108,28 +103,12 @@ class _LongState extends State<Long> {
                                 items: crypto,
                                 onChanged: (value) {
                                   setState(() {
-                                    dropdownValue = value;
+                                    dropdownValue = value!;
                                   });
                                 },
                               ),
                               SizedBox(
                                 height: 10,
-                              ),
-                              DropdownButton(
-                                
-                                isExpanded: true,
-                                value: "Option 1",
-                                items: [
-                                  DropdownMenuItem(child:Text("Long",style: TextStyle(color: Colors.green),),
-                                      value: "Option 1"),
-                                  DropdownMenuItem(child:Text("Short",style: TextStyle(color: Colors.red)),
-                                      value: "Option 2"),
-                                ],
-                                onChanged: (value) {
-                                  setState(() {
-                                    longValue = value;
-                                  });
-                                },
                               ),
                               Row(
                                 children: [
@@ -141,22 +120,22 @@ class _LongState extends State<Long> {
                                     decoration: BoxDecoration(
                                         border: Border(
                                             top: BorderSide(
-                                                color: Colors.grey[200],
+                                                color: Colors.grey[200]!,
                                                 width: 1),
                                             bottom: BorderSide(
-                                                color: Colors.grey[200]))),
+                                                color: Colors.grey[200]!))),
                                     child: TextFormField(
                                       
-                                      controller: buy,
+                                      controller: targetSimple,
                                       decoration: InputDecoration(
-                                          hintText: "Buy Price",
+                                          hintText: "Target Price",
                                           hintStyle:
                                               TextStyle(color: Colors.grey),
                                           border: InputBorder.none),
                                       keyboardType: TextInputType.number,
                                       validator: (value) {
-                                        if (value.isEmpty) {
-                                          return 'Please enter your Buy Price';
+                                        if (value == null || value.isEmpty) {
+                                          return 'Please enter your Target Price';
                                         }
                                         return null;
                                       },
@@ -168,7 +147,7 @@ class _LongState extends State<Long> {
                                   TextButton(
                                     onPressed: () {
                                       var current = 1234;
-                                      buy.text = current.toString();
+                                      targetSimple.text = current.toString();
                                     },
                                     child: Text(
                                       "Current Price",
@@ -189,76 +168,22 @@ class _LongState extends State<Long> {
                             ],
                           ),
                         ),
-                        Container(
-                                    padding: EdgeInsets.all(10),
-                                    decoration: BoxDecoration(
-                                        border: Border(
-                                            top: BorderSide(
-                                                color: Colors.grey[200],
-                                                width: 1),
-                                            bottom: BorderSide(
-                                                color: Colors.grey[200]))),
-                                    child: TextFormField(
-                                      
-                                      controller: tp,
-                                      decoration: InputDecoration(
-                                          hintText: "Tp",
-                                          hintStyle:
-                                              TextStyle(color: Colors.grey),
-                                          border: InputBorder.none),
-                                      keyboardType: TextInputType.number,
-                                      validator: (value) {
-                                        if (value.isEmpty) {
-                                          return 'Please enter your Tp';
-                                        }
-                                        return null;
-                                      },
-                                    ),
-                                  ),
-                                  Container(
-
-                                    padding: EdgeInsets.all(10),
-                                    decoration: BoxDecoration(
-                                        border: Border(
-                                            top: BorderSide(
-                                                color: Colors.grey[200],
-                                                width: 1),
-                                            bottom: BorderSide(
-                                                color: Colors.grey[200]))),
-                                    child: TextFormField(
-                                      
-                                      controller: sl,
-                                      decoration: InputDecoration(
-                                          hintText: "SL",
-                                          hintStyle:
-                                              TextStyle(color: Colors.grey),
-                                          border: InputBorder.none),
-                                      keyboardType: TextInputType.number,
-                                      validator: (value) {
-                                        if (value.isEmpty) {
-                                          return 'Please enter your Stop loss';
-                                        }
-                                        return null;
-                                      },
-                                    ),
-                                  ),
                         SizedBox(
-                          height: 50,
+                          height: 70,
                         ),
                         ElevatedButton(
                           style: ElevatedButton.styleFrom(
                               padding: EdgeInsets.symmetric(
-                                  horizontal: 75, vertical: 15),
-                              primary: Color.fromARGB(255, 24, 14, 86),
+                                  horizontal: 75, vertical: 15), backgroundColor: Color.fromARGB(255, 24, 14, 86),
                               elevation: 5,
                               shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(50))),
                           onPressed: () {
-                            buy.text.isNotEmpty ?
+                            targetSimple.text.isNotEmpty ?
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => HomeScreeen())) : null;
+                                    builder: (context) => HomeScreen())) : null;
                           },
                           child: Text(
                             "Add Alarm",
@@ -278,16 +203,4 @@ class _LongState extends State<Long> {
       ),
     );
   }
-}
-
-TextFormField target() {
-  final target_simple = TextEditingController();
-  TextFormField(
-    controller: target_simple,
-    decoration: InputDecoration(
-        hintText: "Target Price",
-        hintStyle: TextStyle(color: Colors.grey),
-        border: InputBorder.none),
-    keyboardType: TextInputType.number,
-  );
 }

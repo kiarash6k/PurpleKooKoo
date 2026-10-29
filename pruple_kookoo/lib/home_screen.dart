@@ -1,21 +1,23 @@
-import 'package:crypto_font_icons/crypto_font_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 import 'package:http/http.dart' as http;
 
 import 'dart:convert';
-import 'Boxes.dart';
-import 'Login.dart';
-import 'Long.dart';
-import 'Recomend.dart';
+import 'boxes.dart';
+import 'login.dart';
+import 'long.dart';
+import 'recommend.dart';
 
-class HomeScreeen extends StatefulWidget {
+class HomeScreen extends StatefulWidget {
   final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
 
-  State<HomeScreeen> createState() => _HomeScreeenState();
+  HomeScreen({super.key});
+
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
 }
 
-class _HomeScreeenState extends State<HomeScreeen> {
+class _HomeScreenState extends State<HomeScreen> {
   @override
   void initState() {
     super.initState();
@@ -23,12 +25,12 @@ class _HomeScreeenState extends State<HomeScreeen> {
 
   @override
   Widget build(BuildContext context) {
-    var size = MediaQuery.of(context).size;
     var width = MediaQuery.of(context).size.width;
     var height = MediaQuery.of(context).size.height;
     return Container(
       decoration: const BoxDecoration(
-          gradient: RadialGradient(radius: 1.1,
+          gradient: RadialGradient(
+              radius: 1.1,
               // begin: Alignment.topCenter,
               // end: Alignment.bottomCenter,
               colors: [
@@ -39,7 +41,8 @@ class _HomeScreeenState extends State<HomeScreeen> {
       child: MaterialApp(
         home: Scaffold(
           backgroundColor: Colors.transparent,
-          body: Column(children: [
+          body: SingleChildScrollView(
+              child: Column(children: [
             SizedBox(
               height: height / 40,
             ),
@@ -82,7 +85,7 @@ class _HomeScreeenState extends State<HomeScreeen> {
               height: height / 35,
             ),
             Container(
-                width: width,
+                width: width - 40,
                 margin: EdgeInsets.fromLTRB(20, 0, 20, 0),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -125,27 +128,32 @@ class _HomeScreeenState extends State<HomeScreeen> {
               height: height / 20,
             ),
             Container(
-                width: width,
+                width: width - 40,
                 margin: EdgeInsets.symmetric(horizontal: 20),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Row(
-                      children: [
-                        Text(
-                          "Favorite assets ",
-                          style: TextStyle(
-                              fontSize: 17,
-                              color: Color.fromARGB(255, 255, 255, 255),
-                              fontWeight: FontWeight.bold),
-                          textAlign: TextAlign.left,
-                        ),
-                        Icon(
-                          Icons.favorite_border_outlined,
-                          color: Color.fromARGB(89, 255, 255, 255),
-                          size: 17,
-                        ),
-                      ],
+                    Flexible(
+                      child: Row(
+                        children: [
+                          Flexible(
+                            child: Text(
+                              "Favorite assets ",
+                              style: TextStyle(
+                                  fontSize: 17,
+                                  color: Color.fromARGB(255, 255, 255, 255),
+                                  fontWeight: FontWeight.bold),
+                              textAlign: TextAlign.left,
+                              overflow: TextOverflow.ellipsis,
+                            ),
+                          ),
+                          Icon(
+                            Icons.favorite_border_outlined,
+                            color: Color.fromARGB(89, 255, 255, 255),
+                            size: 17,
+                          ),
+                        ],
+                      ),
                     ),
                     Text(
                       "Show All",
@@ -169,7 +177,8 @@ class _HomeScreeenState extends State<HomeScreeen> {
                 ),
                 scrollDirection: Axis.horizontal,
                 itemBuilder: (context, index) {
-                  return BoxBuilder(list[index]);
+                  return Box(list[index].title, list[index].description,
+                      list[index].image, list[index].change);
                 },
                 itemCount: 4,
               ),
@@ -178,7 +187,7 @@ class _HomeScreeenState extends State<HomeScreeen> {
               height: MediaQuery.of(context).size.height / 30,
             ),
             Container(
-                width: MediaQuery.of(context).size.width,
+                width: MediaQuery.of(context).size.width - 40,
                 margin: EdgeInsets.fromLTRB(20, 0, 20, 0),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -227,7 +236,7 @@ class _HomeScreeenState extends State<HomeScreeen> {
               ),
               Recommended("BTC", "22000.0", "btc", "-0.03%", Colors.red),
             ]),
-          ]),
+          ])),
           floatingActionButton: SpeedDial(
             direction: SpeedDialDirection.down,
             buttonSize: Size(45, 45),
@@ -281,7 +290,6 @@ class _HomeScreeenState extends State<HomeScreeen> {
     );
   }
 
-
   List<Box> list = [
     Box("BTC", "19900", "btc", "-0.03%"),
     Box("ETC", "15.0", "etc", "-0.1%"),
@@ -289,9 +297,6 @@ class _HomeScreeenState extends State<HomeScreeen> {
     Box("LTC", "452.0", "ltc", "-2.52%"),
   ];
 
-  Widget BoxBuilder(Box list) {
-    return Box(list.title, list.description, list.image, list.PS);
-  }
 }
 
 class Currency {
@@ -299,22 +304,25 @@ class Currency {
   final String name;
   Currency({
     // this.price,
-    this.name,
+    required this.name,
   });
 }
 
-Future getRequest(String name) async {
-  //replace your restFull API here.
-  String url = "https://jsonplaceholder.typicode.com/posts";
-  final response =
-      await http.get(Uri.parse("https://api.kucoin.com/api/v1/prices"));
-
-  var responseData = json.decode(response.body);
-
-  //Creating a list to store input data;
-  Currency currency = Currency(
-    name: responseData["data"][name],
-  );
-
-  return currency.name;
+/// Fetches the latest KuCoin price for [name] (e.g. "BTC").
+///
+/// Returns null when the request fails or the symbol is unknown, so callers
+/// can show an error state instead of crashing.
+Future<String?> getRequest(String name) async {
+  try {
+    final response = await http
+        .get(Uri.parse("https://api.kucoin.com/api/v1/prices"))
+        .timeout(const Duration(seconds: 10));
+    if (response.statusCode != 200) return null;
+    final data = json.decode(response.body)["data"];
+    final price = data is Map ? data[name] : null;
+    return price?.toString();
+  } catch (_) {
+    // Network error, timeout, or a CORS block on web.
+    return null;
+  }
 }

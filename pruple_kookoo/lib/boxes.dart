@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 
 class Box extends StatelessWidget {
+  final String title;
+  final String change;
+  final String description;
+  final String image;
+  const Box(this.title, this.description, this.image, this.change,
+      {super.key});
   @override
-  String title;
-  String PS;
-  String description;
-  String image;
-  Box(this.title, this.description, this.image, this.PS);
   Widget build(BuildContext context) {
     return 
       
@@ -17,6 +18,11 @@ class Box extends StatelessWidget {
                     left: MediaQuery.of(context).size.width * 0.03,),
                 width: MediaQuery.of(context).size.width / 1.9,
                 height: MediaQuery.of(context).size.height / 6,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(30),
+                  //color: Color.fromARGB(65, 255, 255, 255),
+                  color: Colors.white.withValues(alpha: 0.13),
+                ),
                 child: Column(
                   children: [
                     // SizedBox(
@@ -56,7 +62,7 @@ class Box extends StatelessWidget {
                               ),
                             ),
                             Text(
-                              title+"/Usdt",
+                              "$title/Usdt",
                               textAlign: TextAlign.center,
                               style: TextStyle(
                                 fontSize: MediaQuery.of(context).size.height / 65,
@@ -88,7 +94,7 @@ class Box extends StatelessWidget {
                         ),
                         SizedBox(width: MediaQuery.of(context).size.width / 15),
                         Text(
-                          PS,
+                          change,
                           textAlign: TextAlign.center,
                           style: TextStyle(
                             fontSize: MediaQuery.of(context).size.height / 60,
@@ -100,11 +106,6 @@ class Box extends StatelessWidget {
                       ],
                     ),
                   ],
-                ),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(30),
-                  //color: Color.fromARGB(65, 255, 255, 255),
-                  color: Colors.white.withOpacity(0.13),
                 ),
               
               
