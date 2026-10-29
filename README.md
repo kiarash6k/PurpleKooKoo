@@ -70,21 +70,6 @@ lib/
 - **Testability:** the HTTP client, repository, notifier and `SharedPreferences` are all injectable; tests use fakes and `MockClient`.
 - **Persistence:** alarms, favorites and settings via `shared_preferences`, tolerant of corrupt data.
 
-## Platform notes
-
-- **Alarms are checked while the app is running.** iOS and Android do not allow free-running background polling; true background alerts would need a small server that pushes notifications (FCM/APNs).
-- **Web:** browsers enforce CORS. If the KuCoin endpoint is not reachable from your origin, the app shows the offline banner. Point `MarketRepository(endpoint: …)` at a proxy to fix this. System notifications are disabled on web; alarms still surface as in-app banners.
-- **Android release signing:** create `android/key.properties` (git-ignored) with `storeFile`, `storePassword`, `keyAlias`, `keyPassword`. Without it, release builds fall back to the debug key.
-- **App ID:** `com.kiarash.purplekookoo`. Change it in `android/app/build.gradle.kts` and the Xcode project before publishing under another name.
-- Regenerate launcher icons after changing `assets/images/kookoo.png`: `dart run flutter_launcher_icons`.
-
-## Roadmap
-
-- [ ] Push-based background alerts (FCM) via a tiny backend
-- [ ] Price charts / sparklines per coin
-- [ ] Percentage-change and repeating alarms
-- [ ] Localisation
-
 ## Disclaimer
 
 Prices are informational and provided by a third-party public API. This app is not financial advice.
